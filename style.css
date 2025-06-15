@@ -1,0 +1,456 @@
+/* Reset e padronização de margens e bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Estilo para Cabeçalho */
+header {
+    position: relative;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header .banner {
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    /* Se você tiver uma imagem de fundo para o banner, substitua 'banner-background.jpg' */
+    /* background-image: url('banner-background.jpg'); */
+    background-size: cover;
+    color: white;
+}
+
+header .banner h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header .banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header .cta-button {
+    padding: 12px 25px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+header .cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Menu de Navegação */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333; /* Cor de fundo para o menu */
+    position: sticky; /* Menu fixo ao rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 15px 0; /* Adiciona padding para tornar a área clicável maior */
+    display: block; /* Garante que o padding funcione */
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d3e03d;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        padding: 10px 20px;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; /* Reduz o espaçamento superior */
+        background-color: #333; /* Mantém o fundo escuro para o menu colapsado */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Reduz o espaçamento vertical */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+}
+
+/* Estilo para as seções de conteúdo */
+.section {
+    margin: 50px auto; /* Centraliza as seções e adiciona margem vertical */
+    max-width: 1200px; /* Limita a largura máxima das seções */
+    padding: 40px; /* Aumenta o padding interno para mais espaço */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex; /* Garante flexbox para layout de texto/imagem */
+    align-items: center;
+}
+
+.section:hover {
+    transform: scale(1.01); /* Efeito sutil ao passar o mouse */
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px; /* Aumenta o espaçamento abaixo do título */
+    color: #4CAF50;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center; /* Centraliza o título */
+    width: 100%; /* Garante que o título ocupe toda a largura */
+}
+
+.section p {
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte para melhor leitura */
+    line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+    margin-bottom: 15px;
+}
+
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    width: 100%;
+}
+
+.text {
+    flex-basis: 65%; /* Ajusta a proporção do texto */
+    padding-right: 30px; /* Aumenta o espaçamento à direita do texto */
+}
+
+.image {
+    flex-basis: 35%; /* Ajusta a proporção da imagem */
+    padding-left: 30px; /* Aumenta o espaçamento à esquerda da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para o Plano de Ação */
+#plano-de-acao ol {
+    list-style-type: decimal; /* Numeração para as fases */
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#plano-de-acao ol li {
+    margin-bottom: 25px; /* Espaço maior entre as fases */
+}
+
+#plano-de-acao h3 {
+    font-size: 1.5rem;
+    color: #00531c96; /* Uma cor diferente para os títulos das fases */
+    margin-bottom: 10px;
+}
+
+#plano-de-acao ul {
+    list-style-type: disc; /* Marcadores para os itens dentro das fases */
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#plano-de-acao ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+
+/* Responsividade para seções de conteúdo */
+@media (max-width: 992px) {
+    .section {
+        padding: 30px;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .text {
+        flex-basis: 60%;
+        padding-right: 20px;
+    }
+
+    .image {
+        flex-basis: 40%;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .section {
+        padding: 20px;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        flex-basis: 100%;
+        padding-right: 0;
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    .image {
+        flex-basis: 100%;
+        margin-top: 25px; /* Mais espaço entre texto e imagem */
+        padding-left: 0;
+    }
+
+    #plano-de-acao ol, #plano-de-acao ul {
+        margin-left: 0; /* Remove o recuo em telas pequenas */
+        padding-left: 20px; /* Adiciona um padding para manter a identação da lista */
+    }
+    #plano-de-acao .text {
+        text-align: left; /* Mantém o alinhamento do texto da lista à esquerda */
+    }
+    #plano-de-acao h3 {
+        text-align: left; /* Mantém o alinhamento do título da fase à esquerda */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px; /* Adiciona margem superior para separar do conteúdo */
+}
+
+/* Estilo para a seção Contato Principal (que envolve os dois blocos) */
+.contato-principal {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os blocos quebrem para a próxima linha */
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0; /* Remove padding da seção principal para que os blocos internos gerenciem */
+    background-color: transparent; /* Remove background e sombra da seção principal */
+    box-shadow: none;
+    transform: none; /* Remove efeito hover da seção principal */
+    align-items: stretch; /* Garante que as colunas tenham a mesma altura */
+}
+
+.contato-principal:hover {
+    transform: none; /* Desativa o hover para o container principal */
+}
+
+.contato-principal .section-content {
+    display: flex;
+    flex-direction: row; /* Volta a ser row para alinhar os dois blocos */
+    justify-content: space-between;
+    align-items: stretch; /* Alinha as colunas para ter a mesma altura */
+    width: 100%;
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+
+/* Estilo para a seção Contate-nos (primeira coluna) */
+.contate-nos {
+    flex: 1; /* Ocupa o espaço disponível */
+    padding: 30px; /* Padding interno */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: left; /* Alinha o texto do formulário à esquerda */
+}
+
+.contate-nos h2 {
+    text-align: left; /* Alinha o título "Contate-nos" à esquerda */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.contate-nos p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contate-nos form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contate-nos label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contate-nos input,
+.contate-nos textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+}
+
+.contate-nos textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.contate-nos button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.contate-nos button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para a seção de imagem ao lado (segunda coluna) */
+.imagem-contato {
+    flex: 1; /* Ocupa o espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    padding: 0; /* Remove padding para a imagem preencher o espaço */
+    background-color: transparent; /* Remove background e sombra */
+    box-shadow: none;
+    border-radius: 8px; /* Mantém o border-radius para a imagem se adaptar */
+    overflow: hidden; /* Garante que a imagem não transborde */
+}
+
+.imagem-contato .image {
+    width: 100%;
+    height: 100%; /* Ocupa 100% da altura disponível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remover padding da div image para a imagem preencher */
+}
+
+.imagem-contato .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+}
+
+/* Responsividade para a seção de Contato Principal */
+@media (max-width: 768px) {
+    .contato-principal .section-content {
+        flex-direction: column; /* Em telas menores, os blocos ficam um abaixo do outro */
+        gap: 30px; /* Aumenta o espaço entre os blocos */
+    }
+
+    .contate-nos,
+    .imagem-contato {
+        width: 100%; /* Ocupam a largura total */
+        padding: 25px;
+    }
+
+    .contate-nos h2 {
+        text-align: center; /* Centraliza o título em telas pequenas */
+    }
+    .contate-nos button {
+        align-self: center; /* Centraliza o botão em telas pequenas */
+    }
+}
