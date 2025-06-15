@@ -428,7 +428,7 @@ footer {
 }
 
 .imagem-contato .image img {
-    width: 100%;
+    width: 275%;
     height: 100%;
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
     border-radius: 8px; /* Arredonda as bordas da imagem */
